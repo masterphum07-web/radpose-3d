@@ -30,9 +30,23 @@ function doPost(e) {
     const body = JSON.parse(e.postData.contents || '{}');
     if (body.action === 'health') return json_({ ok: true });
     if (body.action === 'saveRecording') return saveRecording_(body);
+    if (body.action === 'saveChunk') return saveChunk_(body);
     if (body.action === 'saveAlert') return saveAlert_(body);
     return json_({ ok: false, error: 'Unknown action' }, 400);
   } catch (err) { return json_({ ok: false, error: String(err) }, 500); }
+}
+
+function saveChunk_(body) {
+  if (!body.audioBase64 || !body.fileName) throw new Error('audioBase64 and fileName are required');
+  const props = PropertiesService.getScriptProperties();
+  const folder = DriveApp.getFolderById(props.getProperty('DRIVE_FOLDER_ID'));
+  const id = body.recordingId || Utilities.getUuid();
+  const bytes = Utilities.base64Decode(body.audioBase64);
+  const file = folder.createFile(Utilities.newBlob(bytes, body.mimeType || 'audio/webm', body.fileName));
+  const ss = SpreadsheetApp.openById(props.getProperty('SHEET_ID'));
+  const sheet = ss.getSheetByName(CONFIG.sheetName);
+  sheet.appendRow([id, body.userId || '', body.subjectId || '', body.title || 'Lecture recording', Number(body.durationSeconds || 0), file.getId(), file.getUrl(), body.status || 'uploaded', new Date(), '']);
+  return json_({ ok: true, recordingId: id, chunkIndex: Number(body.chunkIndex || 0), totalChunks: Number(body.totalChunks || 0), fileId: file.getId(), url: file.getUrl() });
 }
 
 function saveRecording_(body) {
