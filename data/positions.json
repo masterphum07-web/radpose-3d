@@ -488,5 +488,145 @@
         "text": "CR Midline / L3-L4"
       }
     ]
+  },
+  {
+    "id": "foot-ap",
+    "category": "Lower Extremity",
+    "name_en": "Foot AP (Dorsoplantar)",
+    "name_th": "เท้า ท่า AP (Dorsoplantar)",
+    "clinical_indication": "ประเมิน phalanges, metatarsals, tarsal bones และ foreign body",
+    "patient_position": "นอนหงาย ชันเข่าข้างที่ตรวจ วางฝ่าเท้าแนบสนิทกับแผ่นรับภาพ (IR)",
+    "model_url": "assets/models/human_body_xbot.glb",
+    "image_url": "assets/images/positioning/foot-ap.jpg",
+    "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
+    "parameters": {
+      "sid": "40 inches (100 cm)",
+      "ir_size": "24×30 cm",
+      "tube_angle": "10° cephalad (เอียงไปทางส้นเท้า) หรือ 0°",
+      "central_ray": "ฐานของกระดูก metatarsal ชิ้นที่ 3 (Base of 3rd metatarsal)",
+      "grid": "Non-grid",
+      "kvp_range": "46–50 kVp",
+      "mas_range": "5–8 mAs"
+    },
+    "image_criteria": [
+      "เห็นกระดูกเท้าครบตั้งแต่ปลายข้อนิ้วเท้าจนถึง tarsals",
+      "joint spaces เปิดชัดเจน"
+    ],
+    "pro_tips": "เอียงหลอด 10 องศาไปทางส้นเท้าช่วยเปิด joint spaces ของ tarsometatarsal ให้ชัดเจนขึ้น",
+    "camera_orbit": "0deg 60deg 0.55m",
+    "camera_target": "0.1m 0.05m 0.1m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.1m 0.05m 0.1m",
+        "normal": "0m 1m 0m",
+        "text": "CR Base of 3rd Metatarsal"
+      }
+    ]
+  },
+  {
+    "id": "ankle-lateral",
+    "category": "Lower Extremity",
+    "name_en": "Ankle Lateral (Mediolateral)",
+    "name_th": "ข้อเท้า ท่า Lateral ตะแคงข้าง",
+    "clinical_indication": "ประเมิน distal fibula, calcaneus, talus และ ankle joint ด้านข้าง",
+    "patient_position": "นอนตะแคงข้างที่เจ็บลง วางขอบด้านนอกของข้อเท้าและเท้าแนบชิดกับ IR ดึงปลายเท้าทำมุม 90° (Dorsiflexion)",
+    "model_url": "assets/models/human_body_xbot.glb",
+    "image_url": "assets/images/positioning/ankle-lateral.jpg",
+    "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
+    "parameters": {
+      "sid": "40 inches (100 cm)",
+      "ir_size": "24×30 cm",
+      "tube_angle": "0° Perpendicular",
+      "central_ray": "ตาตุ่มด้านใน (Medial malleolus)",
+      "grid": "Non-grid",
+      "kvp_range": "50–55 kVp",
+      "mas_range": "5–8 mAs"
+    },
+    "image_criteria": [
+      "เห็น tibiotalar joint ด้านข้างชัดเจน",
+      "fibula ทับซ้อนกับส่วนหลังของ tibia พอดี"
+    ],
+    "pro_tips": "ต้อง Dorsiflex เท้า 90 องศาเพื่อป้องกัน joint space ทับซ้อน",
+    "camera_orbit": "90deg 80deg 0.55m",
+    "camera_target": "0.1m 0.08m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.1m 0.08m 0m",
+        "normal": "1m 0m 0m",
+        "text": "CR Medial Malleolus"
+      }
+    ]
+  },
+  {
+    "id": "knee-lateral",
+    "category": "Lower Extremity",
+    "name_en": "Knee Lateral",
+    "name_th": "ข้อเข่า ท่า Lateral ตะแคงข้าง",
+    "clinical_indication": "ประเมิน patella, patellofemoral joint และ joint effusion",
+    "patient_position": "นอนตะแคงข้างที่ตรวจ งอเข่า 20–30 องศา วางด้านนอกของข้อเข่าแนบกับ IR",
+    "model_url": "assets/models/human_body_xbot.glb",
+    "image_url": "assets/images/positioning/knee-lateral.jpg",
+    "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
+    "parameters": {
+      "sid": "40 inches (100 cm)",
+      "ir_size": "24×30 cm",
+      "tube_angle": "5–7° cephalad (เอียงไปทางหัว)",
+      "central_ray": "1 นิ้วใต้ medial epicondyle (ระดับ knee joint)",
+      "grid": "Grid ตามความหนา",
+      "kvp_range": "61–65 kVp",
+      "mas_range": "5–8 mAs"
+    },
+    "image_criteria": [
+      "femoral condyles ทั้งสองซ้อนทับกันพอดี",
+      "patella อยู่ด้านข้างชัดเจน"
+    ],
+    "pro_tips": "เอียงหลอด 5-7 องศาไปทางศีรษะเพื่อชดเชยความต่างระดับของ medial condyle",
+    "camera_orbit": "90deg 80deg 0.7m",
+    "camera_target": "0.1m 0.5m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.1m 0.5m 0m",
+        "normal": "1m 0m 0m",
+        "text": "CR 1 inch distal to medial epicondyle"
+      }
+    ]
+  },
+  {
+    "id": "leg-ap",
+    "category": "Lower Extremity",
+    "name_en": "Tibia/Fibula (Leg) AP",
+    "name_th": "ท่อนขาล่าง (ขาแข้ง) ท่า AP",
+    "clinical_indication": "ประเมินกระดูกหักของ tibia และ fibula ทั้งท่อน",
+    "patient_position": "นอนหงาย เหยียดขาตรง จัดปลายเท้าตั้งฉากและหมุนเข้าในเล็กน้อยเพื่อให้สะบ้าชี้ตรงขึ้นฟ้า",
+    "model_url": "assets/models/human_body_xbot.glb",
+    "image_url": "assets/images/positioning/leg-ap.jpg",
+    "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
+    "parameters": {
+      "sid": "40 inches (100 cm) หรือ 44 inches ตามขนาด IR",
+      "ir_size": "35×43 cm (วางทะแยงมุม Diagonal)",
+      "tube_angle": "0° Perpendicular",
+      "central_ray": "กึ่งกลางท่อนขา (Midpoint of leg)",
+      "grid": "Non-grid หรือ Grid",
+      "kvp_range": "56–60 kVp",
+      "mas_range": "5–8 mAs"
+    },
+    "image_criteria": [
+      "รวมข้อเข่าและข้อเท้าครบทั้ง 2 ข้อในภาพเดียว",
+      "ไม่หมุน"
+    ],
+    "pro_tips": "หากขาลูกค้ายาวกว่าแผ่นฟิล์ม ให้วางคาสเซตต์แนวทแยงมุม (Diagonal placement)",
+    "camera_orbit": "0deg 75deg 0.85m",
+    "camera_target": "0.1m 0.35m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.1m 0.35m 0.05m",
+        "normal": "0m 1m 0m",
+        "text": "CR Midpoint of Leg"
+      }
+    ]
   }
 ]
