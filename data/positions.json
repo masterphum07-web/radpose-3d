@@ -11,7 +11,7 @@
     ],
     "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
     "patient_position": "นอนหงาย ขาเหยียดตรง dorsiflexion เล็กน้อย และหมุนขา/เท้าเข้าใน 15–20°",
-    "model_url": "assets/models/ankle_mortise.glb",
+    "model_url": null,
     "parameters": {
       "sid": "100 cm (40 inches)",
       "ir_size": "24×30 cm",
@@ -44,7 +44,10 @@
         "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
       }
     ],
-    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
+    "image_url": "assets/images/positioning/ankle-ap-mortise.jpg",
+    "image_credit": "Source image extracted from user-supplied PDF: Copy of ก่อนฝึกงาน.pdf",
+    "source_document": "Copy of ก่อนฝึกงาน.pdf"
   },
   {
     "id": "chest-pa",
@@ -58,8 +61,8 @@
     ],
     "clinical_indication": "ประเมินปอด หัวใจ และ mediastinum",
     "patient_position": "ยืนหันหน้าเข้าหา detector วางไหล่ชิดและหมุนไหล่ไปข้างหน้า สูดหายใจเข้าเต็มที่",
-    "image_url": "assets/images/chest-pa-positioning.jpg",
-    "image_credit": "ภาพ: AndyThesis / Wikimedia Commons · CC0 1.0",
+    "image_url": "assets/images/positioning/chest-pa.jpg",
+    "image_credit": "Source image extracted from user-supplied PDF: Copy of ก่อนฝึกงาน.pdf",
     "parameters": {
       "sid": "180 cm (72 inches)",
       "ir_size": "35×43 cm",
@@ -92,7 +95,9 @@
         "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
       }
     ],
-    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
+    "source_document": "Copy of ก่อนฝึกงาน.pdf",
+    "model_url": null
   },
   {
     "id": "knee-ap",
@@ -105,9 +110,9 @@
     ],
     "clinical_indication": "ประเมิน knee joint, distal femur และ proximal tibia",
     "patient_position": "นอนหงาย เหยียดขา จัด patella ให้หันตรงขึ้นและจัดแนวขนานกับ detector",
-    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Normal_knee_X-ray.jpg",
-    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "model_url": null,
+    "image_url": "assets/images/positioning/knee-ap.jpg",
+    "image_credit": "Source image extracted from user-supplied PDF: Copy of ก่อนฝึกงาน.pdf",
     "parameters": {
       "sid": "100 cm (40 inches)",
       "ir_size": "18x24 cm",
@@ -139,7 +144,8 @@
         "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
       }
     ],
-    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
+    "source_document": "Copy of ก่อนฝึกงาน.pdf"
   },
   {
     "id": "c-spine-lateral",
@@ -152,9 +158,9 @@
     ],
     "clinical_indication": "ประเมิน alignment, vertebral bodies และ prevertebral soft tissue",
     "patient_position": "ยืนหรือนอนตะแคง ศีรษะตรง ไหล่กดต่ำ และยื่นคางเล็กน้อย",
-    "model_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/CesiumMan/glTF-Binary/CesiumMan.glb",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/C-Spine_Lateral_view.jpg",
-    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "model_url": null,
+    "image_url": "assets/images/positioning/c-spine-lateral.jpg",
+    "image_credit": "Source image extracted from user-supplied PDF: Copy of ก่อนฝึกงาน.pdf",
     "parameters": {
       "sid": "180 cm (72 inches)",
       "ir_size": "24x30 cm",
@@ -186,7 +192,8 @@
         "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
       }
     ],
-    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
+    "source_document": "Copy of ก่อนฝึกงาน.pdf"
   },
   {
     "id": "hand-pa",
@@ -199,9 +206,9 @@
     ],
     "clinical_indication": "ประเมิน phalanges, metacarpals และ joint spaces",
     "patient_position": "วางมือคว่ำบน detector กางนิ้วเล็กน้อยและจัดนิ้วให้ขนานกับ detector",
-    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Human_hand_plain_X-ray.jpg",
-    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "model_url": null,
+    "image_url": "assets/images/positioning/hand-pa.jpg",
+    "image_credit": "Source image extracted from user-supplied PDF: Copy of ก่อนฝึกงาน.pdf",
     "parameters": {
       "sid": "100 cm (40 inches)",
       "ir_size": "18x24 cm",
@@ -233,6 +240,7 @@
         "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
       }
     ],
-    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
+    "source_document": "Copy of ก่อนฝึกงาน.pdf"
   }
 ]
