@@ -8,4 +8,10 @@
 
 /* prevent the large dashboard header from covering content while scrolling */ header{position:relative!important}.hero{margin-top:12px;padding-top:30px;padding-bottom:30px}@media(max-width:700px){.hero{padding-top:24px;padding-bottom:24px}}
 
+/* clinical image guide: show the source sheet completely, without horizontal cropping */
+.position-image{width:100%;object-fit:contain;background:#050c15;border-radius:15px}
+.detail.highlight{border-color:#3d73d9;background:linear-gradient(135deg,#1b3457,#182942);box-shadow:inset 3px 0 #4d82ff}
+.detail.highlight strong{color:#9dbdff}
+.detail.highlight span{color:#f5f9ff;font-weight:600}
+
 /* compact guide dialog */ .modal-card{width:min(640px,calc(100vw - 32px));max-height:74vh;padding:16px}.modal-card model-viewer,.position-image{height:180px}.viewer-wrap{min-height:180px}.details{grid-template-columns:repeat(3,1fr);gap:7px}.detail{padding:10px}.detail span,.detail li{font-size:.78rem}@media(max-width:700px){.modal-card{max-height:72vh}.modal-card model-viewer,.position-image{height:160px}.viewer-wrap{min-height:160px}}
