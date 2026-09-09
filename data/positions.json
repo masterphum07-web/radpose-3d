@@ -11,7 +11,7 @@
     ],
     "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
   "patient_position": "นอนหงายหรือนั่งเหยียดขา Dorsiflexion เท้าเล็กน้อย แล้วหมุนขาและข้อเท้าเข้าใน (Medial rotation) 15–20 องศา เพื่อให้แนว Intermalleolar ขนานกับ IR",
-    "model_url": null,
+  "model_url": "assets/models/ankle_mortise_clinical.glb",
     "parameters": {
     "sid": "40 inches (100 cm)",
     "ir_size": "24×30 cm (Crosswise / Lengthwise)",
