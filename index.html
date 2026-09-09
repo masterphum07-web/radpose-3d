@@ -1,12 +1,97 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0f172a"><meta name="description" content="RadPose 3D คู่มือจัดท่าเอกซเรย์">
-  <title>RadPose 3D · Radiology Pocket Guide</title><link rel="manifest" href="manifest.json"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="RadPose 3D คู่มือจัดท่าเอกซเรย์">
+  <title>RadPose 3D · Radiology Pocket Guide</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
-<body><header><div class="header-inner"><div class="topline"><div class="brand"><span class="brand-mark">✦</span><span>RadPose <b>3D</b><small>Radiology Pocket Guide</small></span></div><div class="top-actions"><span class="live-dot">● OFFLINE READY</span><button id="themeBtn" class="icon-btn" title="สลับธีม" aria-label="สลับธีม">☼</button></div></div><div class="hero"><div><p class="kicker">CLINICAL POSITIONING LIBRARY</p><h1>จัดท่าให้ชัด <em>ก่อนกดถ่าย</em></h1><p class="hero-copy">คู่มือค้นหาท่าเอกซเรย์ พารามิเตอร์ และ checklist ในหน้าจอเดียว</p></div><div class="hero-orb">⌁<span>3D</span></div></div><label class="search">⌕<input id="searchInput" type="search" autocomplete="off" placeholder="ค้นหา เช่น Chest, Ankle, Waters..."/><kbd>/</kbd></label><nav id="categoryContainer"></nav></div></header>
-<main><div class="summary"><div><span class="section-label">QUICK ACCESS</span><h2>คลังท่าตรวจ</h2></div><div id="status" class="status">กำลังโหลดข้อมูล…</div></div><section id="positionsGrid" class="grid"></section><footer>RadPose 3D เป็นคู่มือเพื่อการศึกษา ไม่ใช่คำสั่งแทน protocol ของหน่วยงาน • <a href="https://github.com/paulvanmetre/anatomy-viewer" target="_blank" rel="noreferrer">Anatomy data</a> • <a href="https://github.com/google/model-viewer" target="_blank" rel="noreferrer">3D viewer</a></footer></main>
-<div id="detailModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button id="closeModalBtn" class="close" aria-label="ปิด">×</button><div class="modal-head"><div><div id="modalCategory" class="eyebrow"></div><h2 id="modalTitle"></h2></div><span id="modelBadge" class="model-badge"></span></div><div class="view-tabs"><button id="imageTab" class="view-tab active">▧ ภาพการจัดท่า</button><button id="modelTab" class="view-tab">◇ โมเดล 3D</button></div><div class="viewer-wrap"><div id="photoStage" class="photo-stage"><img id="positioningPhoto" src="" alt="Setup Guide" class="position-image hidden"><div id="crBadge" class="cr-badge"><span class="cr-dot"></span><span id="crBadgeText">แนวลำรังสี (Central Ray)</span></div></div><model-viewer id="modelViewer" camera-controls auto-rotate touch-action="pan-y" shadow-intensity="0.8" exposure="1" environment-image="neutral" alt="Realistic clinical surface anatomy positioning model" class="hidden"><button class="hotspot landmark medial" slot="hotspot-medial" data-position="0.16m 0.03m 0.02m" data-normal="0m 1m 0m" aria-label="Medial Malleolus">ตาตุ่มใน · Medial Malleolus</button><button class="hotspot landmark lateral" slot="hotspot-lateral" data-position="-0.16m 0.03m 0.02m" data-normal="0m 1m 0m" aria-label="Lateral Malleolus">ตาตุ่มนอก · Lateral Malleolus</button><button class="hotspot landmark cr" slot="hotspot-cr" data-position="0m 0.05m 0.08m" data-normal="0m 1m 0m" aria-label="Central Ray entry point">CR · กึ่งกลางระหว่างตาตุ่ม</button></model-viewer><div id="viewerEmpty" class="viewer-empty hidden"><div>◌</div><strong>ยังไม่มีภาพหรือโมเดล</strong><span>เพิ่มไฟล์เฉพาะท่านี้ใน assets แล้วจึงเปิดดูได้</span></div></div><div id="sourceCredit" class="source-credit hidden"></div><div id="details" class="details"></div></div></div>
-<script type="module" src="js/app.js"></script></body></html>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="topline">
+        <div class="brand">
+          <span class="brand-mark">✦</span>
+          <span>RadPose <b>3D</b><small>Radiology Pocket Guide</small></span>
+        </div>
+        <div class="top-actions">
+          <span class="live-dot">● OFFLINE READY</span>
+          <button id="themeBtn" class="icon-btn" title="สลับธีม" aria-label="สลับธีม">☼</button>
+        </div>
+      </div>
+      <div class="hero">
+        <div>
+          <p class="kicker">CLINICAL POSITIONING LIBRARY</p>
+          <h1>จัดท่าให้ชัด <em>ก่อนกดถ่าย</em></h1>
+          <p class="hero-copy">คู่มือค้นหาท่าเอกซเรย์ พารามิเตอร์ และ checklist ในหน้าจอเดียว</p>
+        </div>
+        <div class="hero-orb">⌁<span>3D</span></div>
+      </div>
+      <label class="search">
+        ⌕<input id="searchInput" type="search" autocomplete="off" placeholder="ค้นหา เช่น Chest, Ankle, Waters, Pelvis..."/>
+        <kbd>/</kbd>
+      </label>
+      <nav id="categoryContainer"></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="summary">
+      <div>
+        <span class="section-label">QUICK ACCESS</span>
+        <h2>คลังท่าตรวจ</h2>
+      </div>
+      <div id="status" class="status">กำลังโหลดข้อมูล…</div>
+    </div>
+    <section id="positionsGrid" class="grid"></section>
+    <footer>
+      RadPose 3D เป็นคู่มือเพื่อการศึกษา ไม่ใช่คำสั่งแทน protocol ของหน่วยงาน • 
+      <a href="https://github.com/Nurkan1/Anatria-3D" target="_blank" rel="noreferrer">3D Anatomy Models</a> • 
+      <a href="https://github.com/google/model-viewer" target="_blank" rel="noreferrer">Google model-viewer</a>
+    </footer>
+  </main>
+
+  <div id="detailModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button id="closeModalBtn" class="close" aria-label="ปิด">×</button>
+      <div class="modal-head">
+        <div>
+          <div id="modalCategory" class="eyebrow"></div>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <span id="modelBadge" class="model-badge"></span>
+      </div>
+      <div class="view-tabs">
+        <button id="imageTab" class="view-tab active">▧ ภาพการจัดท่า</button>
+        <button id="modelTab" class="view-tab">◇ โมเดล 3D</button>
+      </div>
+      <div class="viewer-wrap">
+        <div id="photoStage" class="photo-stage">
+          <img id="positioningPhoto" src="" alt="Setup Guide" class="position-image hidden">
+        </div>
+        <model-viewer id="modelViewer" camera-controls auto-rotate touch-action="pan-y" shadow-intensity="0.8" exposure="1" environment-image="neutral" alt="Anatomical positioning 3D model" class="hidden">
+        </model-viewer>
+        <div id="viewerEmpty" class="viewer-empty hidden">
+          <div>◌</div>
+          <strong>ยังไม่มีภาพหรือโมเดล</strong>
+          <span>เพิ่มไฟล์เฉพาะท่านี้ใน assets แล้วจึงเปิดดูได้</span>
+        </div>
+      </div>
+      <div id="crBar" class="cr-bar">
+        <strong>Central Ray (CR):</strong> <span id="crBarText">-</span>
+      </div>
+      <div id="sourceCredit" class="source-credit hidden"></div>
+      <div id="details" class="details"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -8,7 +8,18 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 MODELS = {
-    # "knee_ap.glb": {"url": "https://...", "license": "CC BY ..."},
+    "human_skeleton.glb": {
+        "url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/skeletal_male.glb",
+        "license": "CC BY-SA 4.0 (Z-Anatomy / BodyParts3D)"
+    },
+    "skeletal_female.glb": {
+        "url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/skeletal_female.glb",
+        "license": "CC BY 4.0 (NIH Human Reference Atlas)"
+    },
+    "articular_joints.glb": {
+        "url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/articular_male.glb",
+        "license": "CC BY-SA 4.0 (Z-Anatomy / BodyParts3D)"
+    }
 }
 OUT = Path("assets/models")
 
