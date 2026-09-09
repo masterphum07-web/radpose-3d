@@ -47,7 +47,17 @@
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "image_url": "assets/images/positioning/ankle-ap-mortise.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
-    "source_document": "Copy of ก่อนฝึกงาน.pdf"
+    "source_document": "Copy of ก่อนฝึกงาน.pdf",
+    "camera_orbit": "45deg 75deg 0.7m",
+    "camera_target": "0m -0.85m 0.05m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m -0.88m 0.08m",
+        "normal": "0m 1m 0m",
+        "text": "⚡ Central Ray (CR) 0° ระหว่างตาตุ่ม"
+      }
+    ]
   },
   {
     "id": "chest-pa",
@@ -97,7 +107,17 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "model_url": "assets/models/human_skeleton.glb"
+    "model_url": "assets/models/human_skeleton.glb",
+    "camera_orbit": "180deg 85deg 1.1m",
+    "camera_target": "0m 0.22m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m 0.22m -0.15m",
+        "normal": "0m 0m -1m",
+        "text": "⚡ Central Ray (CR) T7"
+      }
+    ]
   },
   {
     "id": "knee-ap",
@@ -145,7 +165,17 @@
       }
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
-    "source_document": "Copy of ก่อนฝึกงาน.pdf"
+    "source_document": "Copy of ก่อนฝึกงาน.pdf",
+    "camera_orbit": "0deg 75deg 0.8m",
+    "camera_target": "0m -0.45m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m -0.45m 0.08m",
+        "normal": "0m 0m 1m",
+        "text": "⚡ Central Ray (CR) กึ่งกลางข้อเข่า"
+      }
+    ]
   },
   {
     "id": "c-spine-lateral",
@@ -193,7 +223,17 @@
       }
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
-    "source_document": "Copy of ก่อนฝึกงาน.pdf"
+    "source_document": "Copy of ก่อนฝึกงาน.pdf",
+    "camera_orbit": "90deg 85deg 0.6m",
+    "camera_target": "0m 0.42m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.08m 0.42m 0m",
+        "normal": "1m 0m 0m",
+        "text": "⚡ Central Ray (CR) ระดับ C4"
+      }
+    ]
   },
   {
     "id": "hand-pa",
@@ -241,7 +281,17 @@
       }
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
-    "source_document": "Copy of ก่อนฝึกงาน.pdf"
+    "source_document": "Copy of ก่อนฝึกงาน.pdf",
+    "camera_orbit": "0deg 60deg 0.6m",
+    "camera_target": "0.35m -0.05m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0.35m -0.05m 0.05m",
+        "normal": "0m 0m 1m",
+        "text": "⚡ Central Ray (CR) 3rd MCP Joint"
+      }
+    ]
   },
   {
     "id": "abdomen-supine",
@@ -329,7 +379,17 @@
     "pro_tips": "ห้ามหมุนขาเข้าในหากสงสัย fracture หรือ dislocation",
     "source": "Pelvis.pdf",
     "model_url": "assets/models/human_skeleton.glb",
-    "image_url": null
+    "image_url": null,
+    "camera_orbit": "0deg 80deg 0.8m",
+    "camera_target": "0m -0.08m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m -0.08m 0.12m",
+        "normal": "0m 0m 1m",
+        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+      }
+    ]
   },
   {
     "id": "pelvis-frog-leg",
@@ -358,7 +418,17 @@
     "pro_tips": "ไม่ใช้ท่านี้ในผู้ป่วยที่สงสัย hip fracture จนกว่าจะได้รับคำสั่งที่เหมาะสม",
     "source": "Pelvis.pdf",
     "model_url": "assets/models/human_skeleton.glb",
-    "image_url": null
+    "image_url": null,
+    "camera_orbit": "0deg 80deg 0.8m",
+    "camera_target": "0m -0.08m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m -0.08m 0.12m",
+        "normal": "0m 0m 1m",
+        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+      }
+    ]
   },
   {
     "id": "pelvis-inlet",
@@ -387,6 +457,16 @@
     "pro_tips": "ตรวจสอบองศาหลอดและ landmark กับ protocol ของหน่วยงานก่อนถ่าย",
     "source": "Pelvis.pdf",
     "model_url": "assets/models/human_skeleton.glb",
-    "image_url": null
+    "image_url": null,
+    "camera_orbit": "0deg 80deg 0.8m",
+    "camera_target": "0m -0.08m 0m",
+    "hotspots": [
+      {
+        "slot": "hotspot-cr",
+        "position": "0m -0.08m 0.12m",
+        "normal": "0m 0m 1m",
+        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+      }
+    ]
   }
 ]

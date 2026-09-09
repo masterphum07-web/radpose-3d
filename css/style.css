@@ -705,3 +705,27 @@ footer a {
   .form-row { grid-template-columns: 1fr; }
   .form-actions { flex-direction: column-reverse; }
 }
+
+/* 3D Hotspot and Central Ray beam indicator */
+.hotspot-cr {
+  background: #f59e0b;
+  color: #0b1526;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font: 700 .75rem 'Prompt', sans-serif;
+  box-shadow: 0 0 15px #f59e0bcc, 0 4px 10px #00000088;
+  cursor: pointer;
+  white-space: nowrap;
+  animation: pulse-cr 1.8s infinite;
+}
+
+@keyframes pulse-cr {
+  0% { transform: scale(1); box-shadow: 0 0 10px #f59e0bcc; }
+  50% { transform: scale(1.08); box-shadow: 0 0 22px #f59e0bff; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #f59e0bcc; }
+}
+
+.modal-card model-viewer {
+  --poster-color: transparent;
+}

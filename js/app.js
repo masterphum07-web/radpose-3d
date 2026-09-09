@@ -71,6 +71,24 @@ function filter() {
 
 let currentItem = null;
 
+function renderHotspots(item) {
+  const viewer = $('modelViewer');
+  // Remove existing dynamic hotspots
+  viewer.querySelectorAll('.hotspot-cr').forEach(el => el.remove());
+
+  if (!item || !item.hotspots) return;
+
+  item.hotspots.forEach(h => {
+    const btn = document.createElement('button');
+    btn.className = 'hotspot-cr';
+    btn.slot = h.slot || 'hotspot-cr';
+    btn.dataset.position = h.position;
+    btn.dataset.normal = h.normal || '0m 1m 0m';
+    btn.textContent = h.text || '⚡ Central Ray (CR)';
+    viewer.appendChild(btn);
+  });
+}
+
 function setView(mode) {
   if (!currentItem) return;
   const image = $('positioningPhoto');
@@ -107,6 +125,21 @@ function setView(mode) {
     if (hasModel) {
       empty.classList.add('hidden');
       viewer.classList.remove('hidden');
+
+      // Set camera angle and target focused on the specific anatomical area
+      if (currentItem.camera_orbit) {
+        viewer.setAttribute('camera-orbit', currentItem.camera_orbit);
+      } else {
+        viewer.removeAttribute('camera-orbit');
+      }
+      if (currentItem.camera_target) {
+        viewer.setAttribute('camera-target', currentItem.camera_target);
+      } else {
+        viewer.removeAttribute('camera-target');
+      }
+
+      renderHotspots(currentItem);
+
       if (viewer.getAttribute('src') !== currentItem.model_url) {
         viewer.setAttribute('src', currentItem.model_url);
       }
@@ -394,7 +427,7 @@ async function init() {
 }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js?build=16').catch(console.warn);
+  navigator.serviceWorker.register('./service-worker.js?build=17').catch(console.warn);
 }
 
 init();
