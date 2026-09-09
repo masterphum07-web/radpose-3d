@@ -1,19 +1,18 @@
-# OrbitNotes
+# RadPose 3D
 
-MVP ของแอปบันทึกเลคเชอร์และเตรียมสอบ ตามเอกสารโปรเจกต์ที่ให้มา
+Interactive client-side radiographic positioning pocket guide for GitHub Pages.
 
-## ทดลองใช้งาน
+## Sources and licensing
 
-เปิด `index.html` ในเบราว์เซอร์ หรือรันเซิร์ฟเวอร์ง่าย ๆ:
+- Viewer: [`google/model-viewer`](https://github.com/google/model-viewer), Apache-2.0.
+- Anatomy reference/asset pipeline: [`paulvanmetre/anatomy-viewer`](https://github.com/paulvanmetre/anatomy-viewer), using BodyParts3D under CC BY-SA 2.1 Japan.
+- Alternative atlas: [Z-Anatomy](https://github.com/Z-Anatomy/Models-of-human-anatomy), CC BY-SA 4.0.
+- Technique values are educational examples. Verify against local protocol and qualified clinical guidance.
 
-```bash
-python -m http.server 3000
-```
+## Add a model
 
-แล้วเปิด http://localhost:3000
+Put a licensed `.glb` file in `assets/models/`, then set its relative path in `data/positions.json` under `model_url`.
 
-ตอนนี้มี Dashboard, วิชา, คลังไฟล์, Exam Radar และการอัดเสียงจริงด้วย MediaRecorder ในเครื่อง ส่วน Whisper/Gemini/Supabase ต้องเติม environment variables และ backend ก่อนนำขึ้น production
+## Deploy
 
-## Google Drive storage
-
-Frontend เชื่อมกับ Apps Script Web App ที่ตั้งค่าไว้ให้แล้ว และอัปโหลดเสียงเป็นช่วงละประมาณ 5 นาทีเข้า Google Drive พร้อมบันทึกข้อมูลลง Google Sheet โดยใช้ `DRIVE_FOLDER_ID` และ `SHEET_ID` ที่กำหนดใน `app.js` และ `apps-script/Code.gs`
+Push to GitHub and enable Pages from `main` and `/ (root)`. No build step is required.

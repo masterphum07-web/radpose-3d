@@ -1,30 +1,12 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="theme-color" content="#4f46e5"/>
-  <title>OrbitNotes — AI Lecture Recorder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a"><meta name="description" content="RadPose 3D คู่มือจัดท่าเอกซเรย์">
+  <title>RadPose 3D</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar"><div class="brand"><span class="brand-mark">✦</span><span>Orbit<span>Notes</span></span></div>
-      <button class="profile" id="profile-button"><div class="avatar">P</div><div><b>Phumshop</b><small>นักเรียน</small></div><span class="dots">•••</span></button>
-      <nav><a class="active" href="#dashboard" data-page="dashboard">⌂ <span>หน้าหลัก</span></a><a href="#record" data-page="record">◉ <span>อัดเลคเชอร์</span></a><a href="#library" data-page="library">▣ <span>คลังไฟล์</span><em id="library-count">0</em></a><a href="#exam" data-page="exam">⚑ <span>หมุดเตรียมสอบ</span><em class="pink">0</em></a></nav>
-      <div class="side-bottom"><a href="#subjects" data-page="subjects">⚙ <span>จัดการวิชา</span></a><a href="#profile" data-page="profile">◯ <span>โปรไฟล์</span></a><a href="#settings" data-page="settings">◌ <span>ตั้งค่า</span></a></div>
-    </aside>
-    <main><header><div><p class="eyebrow">OrbitNotes</p><h1 id="page-title">สวัสดี, Phumshop <span>👋</span></h1></div><div class="header-actions"><button class="icon-btn" id="search-button" title="ค้นหา">⌕</button><button class="icon-btn" id="notification-button" title="การแจ้งเตือน">♧<i></i></button><button class="avatar" id="profile-button-top" title="โปรไฟล์">P</button></div></header>
-      <section id="dashboard" class="page active-page"><div class="hero"><div><span class="pill">✦ ผู้ช่วยเรียนรู้ของคุณ</span><h2>เรียนรู้ให้ลึกขึ้น<br><span>จำได้มากขึ้น</span></h2><p>บันทึกเลคเชอร์ แล้วให้ OrbitNotes ช่วยสรุป<br>พร้อมจับคำสำคัญที่อาจออกสอบให้คุณ</p><button class="primary" data-page="record">เริ่มอัดเลคเชอร์ <b>→</b></button></div><div class="hero-art"><div class="orb">✦</div><div class="float-card">◉ <b>Exam Radar</b><small>จับคำออกสอบอัตโนมัติ</small></div></div></div>
-        <div class="section-head"><div><h3>วิชาของฉัน <span class="muted">8 วิชา</span></h3><p>จัดการและทบทวนเลคเชอร์ของคุณ</p></div><a href="#subjects" data-page="subjects">ดูทั้งหมด →</a></div><div class="subject-grid" id="subject-grid"></div>
-        <div class="section-head recent-head"><div><h3>เลคเชอร์ล่าสุด</h3><p>กลับไปทบทวนเนื้อหาที่เพิ่งเรียน</p></div><a href="#library" data-page="library">ดูคลังไฟล์ →</a></div><div class="recording-list"></div>
-      </section>
-      <section id="record" class="page"><div class="section-head"><div><h2>อัดเลคเชอร์</h2><p>วางโทรศัพท์ไว้ แล้วตั้งใจเรียนได้เลย</p></div></div><div class="recorder-card"><div class="rec-orb" id="rec-orb">◉</div><div class="timer" id="timer">00:00</div><p id="rec-status">พร้อมบันทึกเสียง</p><div class="wave" id="wave">〰 〰 〰 〰 〰 〰 〰</div><div class="rec-controls"><button class="primary record-btn" id="record-btn">● เริ่มอัดเสียง</button><button class="secondary" id="stop-btn" disabled>■ หยุด</button></div><small class="hint">การบันทึกจะอยู่ในเครื่องของคุณ · ควรเปิดหน้านี้ค้างไว้ขณะอัดเสียงบน iPhone</small></div></section>
-      <section id="library" class="page"><div class="section-head"><div><h2>คลังไฟล์</h2><p>เลคเชอร์ทั้งหมดของคุณ</p></div></div><div class="library-card"><div class="search">⌕ ค้นหาเลคเชอร์...</div><div class="recording-list" id="library-list"></div></div></section>
-      <section id="exam" class="page"><div class="section-head"><div><h2>หมุดเตรียมสอบ <span class="count-badge">0</span></h2><p>ยังไม่มีคำที่ถูกปักหมุด</p></div></div><div class="empty-state">เมื่อเชื่อม Gemini แล้ว Exam Radar จะแสดงผลที่นี่</div></section>
-      <section id="subjects" class="page"><div class="section-head"><div><h2>วิชาของฉัน</h2><p>จัดการวิชาที่กำลังเรียน</p></div><button class="primary" id="add-subject">+ เพิ่มวิชา</button></div><div class="subject-grid" id="all-subjects"></div></section>
-      <section id="settings" class="page"><div class="section-head"><div><h2>ตั้งค่า</h2><p>ปรับแต่ง OrbitNotes ให้เหมาะกับคุณ</p></div></div><div class="settings-card"><label>ชื่อผู้ใช้<input value="Phumshop"></label><label>ภาษาอินเทอร์เฟซ<select><option>ไทย</option><option>English</option></select></label><label class="toggle-row">แจ้งเตือนเมื่อสรุปเสร็จ <input type="checkbox" checked></label></div></section>
-      <section id="profile" class="page"><div class="profile-page"><div class="profile-cover"></div><div class="profile-main"><div class="profile-large-avatar" id="profile-avatar-large">P</div><div class="profile-heading"><h2 id="profile-display-name">Phumshop</h2><p>นักเรียน · สมาชิก OrbitNotes</p></div><button class="secondary" id="profile-save">บันทึกโปรไฟล์</button></div><div class="profile-grid"><div class="settings-card"><h3>ข้อมูลส่วนตัว</h3><label>ชื่อที่แสดง<input id="profile-name" value="Phumshop"></label><label>อีเมล<input id="profile-email" type="email" placeholder="your@email.com"></label><label>คำอธิบายสั้น ๆ<textarea id="profile-bio" rows="3" placeholder="บอกเกี่ยวกับตัวคุณ"></textarea></label></div><div class="stats-card"><h3>สถิติการเรียน</h3><div class="stat"><b id="profile-lecture-count">0</b><span>เลคเชอร์ที่บันทึก</span></div><div class="stat"><b id="profile-subject-count">0</b><span>วิชาที่เรียน</span></div><div class="stat"><b>Drive</b><span>พื้นที่จัดเก็บเสียง</span></div></div></div></div></section>
-    </main>
-  </div><script src="app.js"></script>
-</body></html>
+<body><header><div class="header-inner"><div class="brand">☢️ <span>RadPose <b>3D</b></span><small>Radiology Pocket Guide</small></div><label class="search">⌕<input id="searchInput" type="search" placeholder="ค้นหาท่า อวัยวะ หรือ alias..."></label><nav id="categoryContainer"></nav></div></header>
+<main><div id="status" class="status">กำลังโหลดข้อมูล…</div><section id="positionsGrid" class="grid"></section><footer>RadPose 3D เป็นคู่มือเพื่อการศึกษา ไม่ใช่คำสั่งแทน protocol ของหน่วยงาน • <a href="https://github.com/paulvanmetre/anatomy-viewer" target="_blank" rel="noreferrer">Anatomy data reference</a> • <a href="https://github.com/google/model-viewer" target="_blank" rel="noreferrer">model-viewer</a></footer></main>
+<div id="detailModal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card"><button id="closeModalBtn" class="close" aria-label="ปิด">×</button><div class="modal-head"><div><div id="modalCategory" class="eyebrow"></div><h2 id="modalTitle"></h2></div></div><model-viewer id="modelViewer" camera-controls auto-rotate shadow-intensity="1" exposure="1" alt="3D positioning model"></model-viewer><div id="details" class="details"></div></div></div>
+<script type="module" src="js/app.js"></script></body></html>
