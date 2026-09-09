@@ -13,5 +13,6 @@
 .detail.highlight{border-color:#3d73d9;background:linear-gradient(135deg,#1b3457,#182942);box-shadow:inset 3px 0 #4d82ff}
 .detail.highlight strong{color:#9dbdff}
 .detail.highlight span{color:#f5f9ff;font-weight:600}
+.photo-stage{position:relative;width:100%;height:180px;background:#050c15;border-radius:15px;overflow:hidden;border:1px solid #203a50;display:flex;align-items:center;justify-content:center}.photo-stage .position-image{height:100%;border-radius:0}.cr-badge{position:absolute;top:10px;left:10px;max-width:calc(100% - 20px);background:#dc2626e8;color:#fff;font:700 .68rem 'Prompt';padding:6px 9px;border-radius:7px;box-shadow:0 4px 14px #0008;backdrop-filter:blur(5px)}.cr-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:5px;box-shadow:0 0 0 3px #ffffff55}.photo-stage.hidden{display:none}
 
 /* compact guide dialog */ .modal-card{width:min(640px,calc(100vw - 32px));max-height:74vh;padding:16px}.modal-card model-viewer,.position-image{height:180px}.viewer-wrap{min-height:180px}.details{grid-template-columns:repeat(3,1fr);gap:7px}.detail{padding:10px}.detail span,.detail li{font-size:.78rem}@media(max-width:700px){.modal-card{max-height:72vh}.modal-card model-viewer,.position-image{height:160px}.viewer-wrap{min-height:160px}}

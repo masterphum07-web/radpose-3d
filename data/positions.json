@@ -10,16 +10,16 @@
       "ข้อเท้าหมุนใน"
     ],
     "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
-    "patient_position": "นอนหงาย ขาเหยียดตรง dorsiflexion เล็กน้อย และหมุนขา/เท้าเข้าใน 15–20°",
+  "patient_position": "นอนหงายหรือนั่งเหยียดขา Dorsiflexion เท้าเล็กน้อย แล้วหมุนขาและข้อเท้าเข้าใน (Medial rotation) 15–20 องศา เพื่อให้แนว Intermalleolar ขนานกับ IR",
     "model_url": null,
     "parameters": {
-      "sid": "100 cm (40 inches)",
-      "ir_size": "24×30 cm",
-      "tube_angle": "0° perpendicular",
-      "central_ray": "กึ่งกลางระหว่าง medial และ lateral malleoli",
+    "sid": "40 inches (100 cm)",
+    "ir_size": "24×30 cm (Crosswise / Lengthwise)",
+    "tube_angle": "0° Perpendicular",
+    "central_ray": "กึ่งกลางระหว่าง Medial และ Lateral malleoli (ทำมุมตั้งฉาก)",
       "grid": "Non-grid หรือ grid ตามความหนา",
-      "kvp_range": "55–65 kVp",
-      "mas_range": "2.5–5 mAs"
+    "kvp_range": "50–55 kVp",
+    "mas_range": "5–8 mAs"
     },
     "image_criteria": [
       "Mortise joint space เปิดชัดเจน",
