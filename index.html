@@ -83,6 +83,17 @@
         </div>
         <model-viewer id="modelViewer" camera-controls auto-rotate touch-action="pan-y" shadow-intensity="0.8" exposure="1" environment-image="neutral" alt="Anatomical positioning 3D model" class="hidden">
         </model-viewer>
+        <!-- Realistic X-ray Collimator Light Field & Crosshair on Detector -->
+        <div id="collimatorOverlay" class="collimator-overlay hidden">
+          <div class="collimator-field">
+            <div class="crosshair-h"></div>
+            <div class="crosshair-v"></div>
+            <div class="detector-label">IMAGE RECEPTOR (IR) / BUCKY TABLE</div>
+          </div>
+          <div class="collimator-controls">
+            <button type="button" id="toggleCollimatorBtn" class="hud-pill-btn" title="เปิด/ปิด แสงไฟส่องตรวจ (Collimator Light)">💡 แสงจำลอง Collimator: <span id="collimatorStatus">เปิด</span></button>
+          </div>
+        </div>
         <div id="viewerEmpty" class="viewer-empty hidden">
           <div>◌</div>
           <strong>ยังไม่มีภาพหรือโมเดล</strong>

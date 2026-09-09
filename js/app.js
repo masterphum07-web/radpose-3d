@@ -119,8 +119,11 @@ function setView(mode) {
   $('imageTab').textContent = hasImage ? '▧ ภาพการจัดท่า' : '▧ ภาพการจัดท่า (รออัปโหลด)';
   $('modelTab').textContent = hasModel ? '◇ โมเดล 3D' : '◇ โมเดล 3D (ไม่มี)';
 
+  const collimator = $('collimatorOverlay');
+
   if (mode === 'image') {
     viewer.classList.add('hidden');
+    if (collimator) collimator.classList.add('hidden');
     if (hasImage) {
       photoStage.classList.remove('hidden');
       image.classList.remove('hidden');
@@ -140,6 +143,7 @@ function setView(mode) {
     if (hasModel) {
       empty.classList.add('hidden');
       viewer.classList.remove('hidden');
+      if (collimator) collimator.classList.remove('hidden');
 
       // Set camera angle and target focused on the specific anatomical area
       if (currentItem.camera_orbit) {
@@ -283,6 +287,22 @@ $('themeBtn').onclick = () => {
 $('imageTab').onclick = () => setView('image');
 $('modelTab').onclick = () => setView('model');
 $('searchInput').oninput = filter;
+
+if ($('toggleCollimatorBtn')) {
+  $('toggleCollimatorBtn').onclick = () => {
+    const field = document.querySelector('.collimator-field');
+    const status = $('collimatorStatus');
+    if (field) {
+      if (field.style.display === 'none') {
+        field.style.display = 'flex';
+        if (status) status.textContent = 'เปิด';
+      } else {
+        field.style.display = 'none';
+        if (status) status.textContent = 'ปิด';
+      }
+    }
+  };
+}
 
 /* Admin functionality */
 function toggleAdminMode() {

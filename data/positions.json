@@ -48,14 +48,14 @@
     "image_url": "assets/images/positioning/ankle-ap-mortise.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "45deg 65deg 0.5m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "35deg 70deg 0.55m",
+    "camera_target": "0m 0m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
         "position": "0m 0.05m 0.04m",
         "normal": "0m 1m 0m",
-        "text": "⚡ Central Ray (CR) ระหว่างตาตุ่ม"
+        "text": "CR Center"
       }
     ]
   },
@@ -166,14 +166,14 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "0deg 75deg 0.5m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 75deg 0.55m",
+    "camera_target": "0m 0m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
         "position": "0m 0m 0.08m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) กึ่งกลางข้อเข่า"
+        "text": "CR Center"
       }
     ]
   },
@@ -283,13 +283,13 @@
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
     "camera_orbit": "0deg 45deg 0.45m",
-    "camera_target": "auto auto auto",
+    "camera_target": "0m 0m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
         "position": "0m 0.02m 0m",
         "normal": "0m 1m 0m",
-        "text": "⚡ Central Ray (CR) 3rd MCP Joint"
+        "text": "CR 3rd MCP"
       }
     ]
   },
