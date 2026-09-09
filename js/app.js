@@ -74,18 +74,33 @@ let currentItem = null;
 function renderHotspots(item) {
   const viewer = $('modelViewer');
   // Remove existing dynamic hotspots
-  viewer.querySelectorAll('.hotspot-cr').forEach(el => el.remove());
+  viewer.querySelectorAll('.hotspot-cr, .xray-beam-container').forEach(el => el.remove());
 
   if (!item || !item.hotspots) return;
 
   item.hotspots.forEach(h => {
-    const btn = document.createElement('button');
-    btn.className = 'hotspot-cr';
-    btn.slot = h.slot || 'hotspot-cr';
-    btn.dataset.position = h.position;
-    btn.dataset.normal = h.normal || '0m 1m 0m';
-    btn.textContent = h.text || '⚡ Central Ray (CR)';
-    viewer.appendChild(btn);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'xray-beam-container';
+    wrapper.slot = h.slot || 'hotspot-cr';
+    wrapper.dataset.position = h.position;
+    wrapper.dataset.normal = h.normal || '0m 1m 0m';
+
+    const tubeHead = document.createElement('div');
+    tubeHead.className = 'xray-tube-head';
+    tubeHead.textContent = '☢ X-RAY TUBE';
+
+    const beam = document.createElement('div');
+    beam.className = 'xray-beam-laser';
+
+    const targetBtn = document.createElement('button');
+    targetBtn.className = 'hotspot-cr';
+    targetBtn.textContent = h.text || '⚡ Central Ray (CR)';
+
+    wrapper.appendChild(tubeHead);
+    wrapper.appendChild(beam);
+    wrapper.appendChild(targetBtn);
+
+    viewer.appendChild(wrapper);
   });
 }
 
