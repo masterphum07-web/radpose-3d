@@ -11,7 +11,7 @@
     ],
     "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
     "patient_position": "นอนหงายหรือนั่งเหยียดขา Dorsiflexion เท้าเล็กน้อย แล้วหมุนขาและข้อเท้าเข้าใน (Medial rotation) 15–20 องศา เพื่อให้แนว Intermalleolar ขนานกับ IR",
-    "model_url": "assets/models/ankle-foot.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "parameters": {
       "sid": "40 inches (100 cm)",
       "ir_size": "24×30 cm (Crosswise / Lengthwise)",
@@ -48,14 +48,14 @@
     "image_url": "assets/images/positioning/ankle-ap-mortise.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "35deg 70deg 0.55m",
-    "camera_target": "0m 0m 0m",
+    "camera_orbit": "45deg 70deg 0.6m",
+    "camera_target": "0.1m 0.1m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0.05m 0.04m",
+        "position": "0.1m 0.1m 0.05m",
         "normal": "0m 1m 0m",
-        "text": "CR Center"
+        "text": "CR Medial-Lateral Malleoli"
       }
     ]
   },
@@ -107,15 +107,15 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "model_url": "assets/models/spine-trunk.glb",
-    "camera_orbit": "180deg 85deg 0.9m",
-    "camera_target": "auto auto auto",
+    "model_url": "assets/models/human_body_xbot.glb",
+    "camera_orbit": "180deg 85deg 1.1m",
+    "camera_target": "0m 1.25m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0.1m -0.15m",
+        "position": "0m 1.25m -0.15m",
         "normal": "0m 0m -1m",
-        "text": "⚡ Central Ray (CR) ระดับ T7"
+        "text": "CR Level T7"
       }
     ]
   },
@@ -130,7 +130,7 @@
     ],
     "clinical_indication": "ประเมิน knee joint, distal femur และ proximal tibia",
     "patient_position": "นอนหงาย เหยียดขา จัด patella ให้หันตรงขึ้นและจัดแนวขนานกับ detector",
-    "model_url": "assets/models/knee.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": "assets/images/positioning/knee-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -166,14 +166,14 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "0deg 75deg 0.55m",
-    "camera_target": "0m 0m 0m",
+    "camera_orbit": "0deg 75deg 0.7m",
+    "camera_target": "0.1m 0.5m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0m 0.08m",
+        "position": "0.1m 0.5m 0.1m",
         "normal": "0m 0m 1m",
-        "text": "CR Center"
+        "text": "CR Center of Knee"
       }
     ]
   },
@@ -188,7 +188,7 @@
     ],
     "clinical_indication": "ประเมิน alignment, vertebral bodies และ prevertebral soft tissue",
     "patient_position": "ยืนหรือนอนตะแคง ศีรษะตรง ไหล่กดต่ำ และยื่นคางเล็กน้อย",
-    "model_url": "assets/models/head-neck.glb",
+    "model_url": "assets/models/human_head_skin.glb",
     "image_url": "assets/images/positioning/c-spine-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -224,14 +224,14 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "90deg 85deg 0.65m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "90deg 85deg 0.7m",
+    "camera_target": "0m 0.05m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0.08m -0.05m 0m",
+        "position": "0.1m -0.05m 0m",
         "normal": "1m 0m 0m",
-        "text": "⚡ Central Ray (CR) C4 (Thyroid Cartilage)"
+        "text": "CR C4 / Thyroid Cartilage"
       }
     ]
   },
@@ -282,7 +282,7 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "0deg 45deg 0.45m",
+    "camera_orbit": "0deg 50deg 0.4m",
     "camera_target": "0m 0m 0m",
     "hotspots": [
       {
@@ -319,16 +319,16 @@
     ],
     "pro_tips": "ให้ผู้ป่วยหายใจออกและกลั้นหายใจก่อน exposure",
     "source": "Position Abdomen.pdf",
-    "model_url": "assets/models/spine-trunk.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": "assets/images/positioning/abdomen-supine.jpg",
-    "camera_orbit": "0deg 75deg 0.85m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 80deg 1.0m",
+    "camera_target": "0m 0.9m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m -0.05m 0.15m",
+        "position": "0m 0.9m 0.15m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) ระดับ L3-L4"
+        "text": "CR Midline / L3-L4"
       }
     ]
   },
@@ -358,16 +358,16 @@
     ],
     "pro_tips": "ถ้ายืนไม่ได้ อาจจัดท่านั่งแทนตาม protocol หน่วยงาน",
     "source": "Position Abdomen.pdf",
-    "model_url": "assets/models/spine-trunk.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": "assets/images/positioning/abdomen-upright.jpg",
-    "camera_orbit": "0deg 75deg 0.85m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 80deg 1.0m",
+    "camera_target": "0m 0.9m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m -0.05m 0.15m",
+        "position": "0m 0.9m 0.15m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) ระดับ L3-L4"
+        "text": "CR Midline / L3-L4"
       }
     ]
   },
@@ -398,16 +398,16 @@
     ],
     "pro_tips": "ห้ามหมุนขาเข้าในหากสงสัย fracture หรือ dislocation",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/hip-pelvis.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": null,
-    "camera_orbit": "0deg 70deg 0.7m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 80deg 1.0m",
+    "camera_target": "0m 0.9m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0m 0.12m",
+        "position": "0m 0.9m 0.15m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+        "text": "CR Midline / L3-L4"
       }
     ]
   },
@@ -437,16 +437,16 @@
     ],
     "pro_tips": "ไม่ใช้ท่านี้ในผู้ป่วยที่สงสัย hip fracture จนกว่าจะได้รับคำสั่งที่เหมาะสม",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/hip-pelvis.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": "assets/images/positioning/pelvis-frogleg.jpg",
-    "camera_orbit": "0deg 70deg 0.7m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 80deg 1.0m",
+    "camera_target": "0m 0.9m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0m 0.12m",
+        "position": "0m 0.9m 0.15m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+        "text": "CR Midline / L3-L4"
       }
     ]
   },
@@ -476,16 +476,16 @@
     ],
     "pro_tips": "ตรวจสอบองศาหลอดและ landmark กับ protocol ของหน่วยงานก่อนถ่าย",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/hip-pelvis.glb",
+    "model_url": "assets/models/human_body_xbot.glb",
     "image_url": null,
-    "camera_orbit": "0deg 70deg 0.7m",
-    "camera_target": "auto auto auto",
+    "camera_orbit": "0deg 80deg 1.0m",
+    "camera_target": "0m 0.9m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
-        "position": "0m 0m 0.12m",
+        "position": "0m 0.9m 0.15m",
         "normal": "0m 0m 1m",
-        "text": "⚡ Central Ray (CR) เหนือ Pubic Symphysis 5cm"
+        "text": "CR Midline / L3-L4"
       }
     ]
   }
