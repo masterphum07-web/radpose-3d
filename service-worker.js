@@ -1,4 +1,4 @@
-const CACHE='radpose-v9';
+const CACHE='radpose-v10';
 const STATIC=['./','./index.html','./css/style.css','./js/app.js','./manifest.json','./data/positions.json','./assets/images/positioning/ankle-ap-mortise.jpg','./assets/images/positioning/chest-pa.jpg','./assets/images/positioning/knee-ap.jpg','./assets/images/positioning/c-spine-lateral.jpg','./assets/images/positioning/hand-pa.jpg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(STATIC)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
