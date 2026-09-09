@@ -11,7 +11,7 @@
     ],
     "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
     "patient_position": "นอนหงายหรือนั่งเหยียดขา Dorsiflexion เท้าเล็กน้อย แล้วหมุนขาและข้อเท้าเข้าใน (Medial rotation) 15–20 องศา เพื่อให้แนว Intermalleolar ขนานกับ IR",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "parameters": {
       "sid": "40 inches (100 cm)",
       "ir_size": "24×30 cm (Crosswise / Lengthwise)",
@@ -48,8 +48,8 @@
     "image_url": "assets/images/positioning/ankle-ap-mortise.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "45deg 70deg 0.6m",
-    "camera_target": "0.1m 0.1m 0m",
+    "camera_orbit": "45deg 70deg 0.65m",
+    "camera_target": "0m -0.85m 0.05m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -107,9 +107,9 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "camera_orbit": "180deg 85deg 1.1m",
-    "camera_target": "0m 1.25m 0m",
+    "camera_target": "0m 0.25m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -130,7 +130,7 @@
     ],
     "clinical_indication": "ประเมิน knee joint, distal femur และ proximal tibia",
     "patient_position": "นอนหงาย เหยียดขา จัด patella ให้หันตรงขึ้นและจัดแนวขนานกับ detector",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/knee-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -166,8 +166,8 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "0deg 75deg 0.7m",
-    "camera_target": "0.1m 0.5m 0m",
+    "camera_orbit": "0deg 75deg 0.75m",
+    "camera_target": "0m -0.45m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -188,7 +188,7 @@
     ],
     "clinical_indication": "ประเมิน alignment, vertebral bodies และ prevertebral soft tissue",
     "patient_position": "ยืนหรือนอนตะแคง ศีรษะตรง ไหล่กดต่ำ และยื่นคางเล็กน้อย",
-    "model_url": "assets/models/human_head_skin.glb",
+    "model_url": "assets/models/portrait_head/scene.gltf",
     "image_url": "assets/images/positioning/c-spine-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -224,8 +224,8 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "90deg 85deg 0.7m",
-    "camera_target": "0m 0.05m 0m",
+    "camera_orbit": "90deg 80deg 0.65m",
+    "camera_target": "auto auto auto",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -246,7 +246,7 @@
     ],
     "clinical_indication": "ประเมิน phalanges, metacarpals และ joint spaces",
     "patient_position": "วางมือคว่ำบน detector กางนิ้วเล็กน้อยและจัดนิ้วให้ขนานกับ detector",
-    "model_url": "assets/models/hand_skin.glb",
+    "model_url": "assets/models/human_arms/scene.gltf",
     "image_url": "assets/images/positioning/hand-pa.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -282,8 +282,8 @@
     ],
     "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง",
     "source_document": "Copy of ก่อนฝึกงาน.pdf",
-    "camera_orbit": "0deg 50deg 0.4m",
-    "camera_target": "0m 0m 0m",
+    "camera_orbit": "0deg 50deg 0.5m",
+    "camera_target": "auto auto auto",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -319,10 +319,10 @@
     ],
     "pro_tips": "ให้ผู้ป่วยหายใจออกและกลั้นหายใจก่อน exposure",
     "source": "Position Abdomen.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/abdomen-supine.jpg",
-    "camera_orbit": "0deg 80deg 1.0m",
-    "camera_target": "0m 0.9m 0m",
+    "camera_orbit": "0deg 75deg 0.9m",
+    "camera_target": "0m -0.1m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -358,10 +358,10 @@
     ],
     "pro_tips": "ถ้ายืนไม่ได้ อาจจัดท่านั่งแทนตาม protocol หน่วยงาน",
     "source": "Position Abdomen.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/abdomen-upright.jpg",
-    "camera_orbit": "0deg 80deg 1.0m",
-    "camera_target": "0m 0.9m 0m",
+    "camera_orbit": "0deg 75deg 0.9m",
+    "camera_target": "0m -0.1m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -398,10 +398,10 @@
     ],
     "pro_tips": "ห้ามหมุนขาเข้าในหากสงสัย fracture หรือ dislocation",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": null,
-    "camera_orbit": "0deg 80deg 1.0m",
-    "camera_target": "0m 0.9m 0m",
+    "camera_orbit": "0deg 75deg 0.9m",
+    "camera_target": "0m -0.1m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -437,10 +437,10 @@
     ],
     "pro_tips": "ไม่ใช้ท่านี้ในผู้ป่วยที่สงสัย hip fracture จนกว่าจะได้รับคำสั่งที่เหมาะสม",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/pelvis-frogleg.jpg",
-    "camera_orbit": "0deg 80deg 1.0m",
-    "camera_target": "0m 0.9m 0m",
+    "camera_orbit": "0deg 75deg 0.75m",
+    "camera_target": "0m -0.45m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -476,10 +476,10 @@
     ],
     "pro_tips": "ตรวจสอบองศาหลอดและ landmark กับ protocol ของหน่วยงานก่อนถ่าย",
     "source": "Pelvis.pdf",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": null,
-    "camera_orbit": "0deg 80deg 1.0m",
-    "camera_target": "0m 0.9m 0m",
+    "camera_orbit": "0deg 75deg 0.9m",
+    "camera_target": "0m -0.1m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -496,7 +496,7 @@
     "name_th": "เท้า ท่า AP (Dorsoplantar)",
     "clinical_indication": "ประเมิน phalanges, metatarsals, tarsal bones และ foreign body",
     "patient_position": "นอนหงาย ชันเข่าข้างที่ตรวจ วางฝ่าเท้าแนบสนิทกับแผ่นรับภาพ (IR)",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/foot-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -513,8 +513,8 @@
       "joint spaces เปิดชัดเจน"
     ],
     "pro_tips": "เอียงหลอด 10 องศาไปทางส้นเท้าช่วยเปิด joint spaces ของ tarsometatarsal ให้ชัดเจนขึ้น",
-    "camera_orbit": "0deg 60deg 0.55m",
-    "camera_target": "0.1m 0.05m 0.1m",
+    "camera_orbit": "45deg 70deg 0.65m",
+    "camera_target": "0m -0.85m 0.05m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -531,7 +531,7 @@
     "name_th": "ข้อเท้า ท่า Lateral ตะแคงข้าง",
     "clinical_indication": "ประเมิน distal fibula, calcaneus, talus และ ankle joint ด้านข้าง",
     "patient_position": "นอนตะแคงข้างที่เจ็บลง วางขอบด้านนอกของข้อเท้าและเท้าแนบชิดกับ IR ดึงปลายเท้าทำมุม 90° (Dorsiflexion)",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/ankle-lateral.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -548,8 +548,8 @@
       "fibula ทับซ้อนกับส่วนหลังของ tibia พอดี"
     ],
     "pro_tips": "ต้อง Dorsiflex เท้า 90 องศาเพื่อป้องกัน joint space ทับซ้อน",
-    "camera_orbit": "90deg 80deg 0.55m",
-    "camera_target": "0.1m 0.08m 0m",
+    "camera_orbit": "45deg 70deg 0.65m",
+    "camera_target": "0m -0.85m 0.05m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -566,7 +566,7 @@
     "name_th": "ข้อเข่า ท่า Lateral ตะแคงข้าง",
     "clinical_indication": "ประเมิน patella, patellofemoral joint และ joint effusion",
     "patient_position": "นอนตะแคงข้างที่ตรวจ งอเข่า 20–30 องศา วางด้านนอกของข้อเข่าแนบกับ IR",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/knee-lateral.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -583,8 +583,8 @@
       "patella อยู่ด้านข้างชัดเจน"
     ],
     "pro_tips": "เอียงหลอด 5-7 องศาไปทางศีรษะเพื่อชดเชยความต่างระดับของ medial condyle",
-    "camera_orbit": "90deg 80deg 0.7m",
-    "camera_target": "0.1m 0.5m 0m",
+    "camera_orbit": "0deg 75deg 0.75m",
+    "camera_target": "0m -0.45m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",
@@ -601,7 +601,7 @@
     "name_th": "ท่อนขาล่าง (ขาแข้ง) ท่า AP",
     "clinical_indication": "ประเมินกระดูกหักของ tibia และ fibula ทั้งท่อน",
     "patient_position": "นอนหงาย เหยียดขาตรง จัดปลายเท้าตั้งฉากและหมุนเข้าในเล็กน้อยเพื่อให้สะบ้าชี้ตรงขึ้นฟ้า",
-    "model_url": "assets/models/human_body_xbot.glb",
+    "model_url": "assets/models/male_body/scene.gltf",
     "image_url": "assets/images/positioning/leg-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
@@ -618,8 +618,8 @@
       "ไม่หมุน"
     ],
     "pro_tips": "หากขาลูกค้ายาวกว่าแผ่นฟิล์ม ให้วางคาสเซตต์แนวทแยงมุม (Diagonal placement)",
-    "camera_orbit": "0deg 75deg 0.85m",
-    "camera_target": "0.1m 0.35m 0m",
+    "camera_orbit": "0deg 75deg 0.75m",
+    "camera_target": "0m -0.45m 0m",
     "hotspots": [
       {
         "slot": "hotspot-cr",

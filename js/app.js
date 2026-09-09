@@ -74,31 +74,24 @@ let currentItem = null;
 function renderHotspots(item) {
   const viewer = $('modelViewer');
   // Remove existing dynamic hotspots
-  viewer.querySelectorAll('.hotspot-cr, .xray-beam-container').forEach(el => el.remove());
+  viewer.querySelectorAll('.hotspot-cr, .xray-beam-container, .xray-pyramid-container').forEach(el => el.remove());
 
   if (!item || !item.hotspots) return;
 
   item.hotspots.forEach(h => {
     const wrapper = document.createElement('div');
-    wrapper.className = 'xray-beam-container';
+    wrapper.className = 'xray-pyramid-container';
     wrapper.slot = h.slot || 'hotspot-cr';
     wrapper.dataset.position = h.position;
     wrapper.dataset.normal = h.normal || '0m 1m 0m';
 
-    const tubeHead = document.createElement('div');
-    tubeHead.className = 'xray-tube-head';
-    tubeHead.textContent = '☢ X-RAY TUBE';
-
-    const beam = document.createElement('div');
-    beam.className = 'xray-beam-laser';
-
-    const targetBtn = document.createElement('button');
-    targetBtn.className = 'hotspot-cr';
-    targetBtn.textContent = h.text || '⚡ Central Ray (CR)';
-
-    wrapper.appendChild(tubeHead);
-    wrapper.appendChild(beam);
-    wrapper.appendChild(targetBtn);
+    // 3D Collimator Box & Projected Light Field
+    wrapper.innerHTML = `
+      <div class="collimator-cone"></div>
+      <div class="cr-cross-center">
+        <span class="cr-target-text">${esc(h.text || '⚡ CR')}</span>
+      </div>
+    `;
 
     viewer.appendChild(wrapper);
   });

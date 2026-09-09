@@ -1,0 +1,11 @@
+Model Information:
+* title:	Human Arms
+* source:	https://sketchfab.com/3d-models/human-arms-d829cff542df4c06b9993f060f41b467
+* author:	Batin1234tr (https://sketchfab.com/Batin1234tr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Human Arms" (https://sketchfab.com/3d-models/human-arms-d829cff542df4c06b9993f060f41b467) by Batin1234tr (https://sketchfab.com/Batin1234tr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
