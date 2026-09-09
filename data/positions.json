@@ -26,7 +26,25 @@
       "ไม่เห็นการทับซ้อนของ distal fibula และ talus",
       "รวม distal tibia/fibula และ talus ครบ"
     ],
-    "pro_tips": "หมุนตั้งแต่สะโพก/ขาทั้งท่อน ไม่ใช่หมุนเฉพาะข้อเท้า"
+    "pro_tips": "หมุนตั้งแต่สะโพก/ขาทั้งท่อน ไม่ใช่หมุนเฉพาะข้อเท้า",
+    "clinical_references": [
+      {
+        "id": "course-pack",
+        "title": "Course pack: Positioning and Basic Radiographic Anatomy (PDFs supplied by user)",
+        "detail": "Position Abdomen.pdf; Pelvis.pdf; การจัดท่า upper limb.pdf; รังสีกายวิภาค Lower limb.pdf; Spine.pdf; กายวิภาคและจัดท่ากะโหลก_merged.pdf"
+      },
+      {
+        "id": "ncbi-statpearls",
+        "title": "NCBI Bookshelf: X-ray Radiographic Patient Positioning",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK565865/"
+      },
+      {
+        "id": "acr-standards",
+        "title": "American College of Radiology: Practice Parameters and Technical Standards",
+        "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
+      }
+    ],
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
   },
   {
     "id": "chest-pa",
@@ -56,7 +74,25 @@
       "หัวใจไม่ขยายจากการถ่าย AP",
       "scapulae อยู่นอก lung fields"
     ],
-    "pro_tips": "ย้ำให้ผู้ป่วยสูดลมหายใจเข้าเต็มที่และกลั้นหายใจ"
+    "pro_tips": "ย้ำให้ผู้ป่วยสูดลมหายใจเข้าเต็มที่และกลั้นหายใจ",
+    "clinical_references": [
+      {
+        "id": "course-pack",
+        "title": "Course pack: Positioning and Basic Radiographic Anatomy (PDFs supplied by user)",
+        "detail": "Position Abdomen.pdf; Pelvis.pdf; การจัดท่า upper limb.pdf; รังสีกายวิภาค Lower limb.pdf; Spine.pdf; กายวิภาคและจัดท่ากะโหลก_merged.pdf"
+      },
+      {
+        "id": "ncbi-statpearls",
+        "title": "NCBI Bookshelf: X-ray Radiographic Patient Positioning",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK565865/"
+      },
+      {
+        "id": "acr-standards",
+        "title": "American College of Radiology: Practice Parameters and Technical Standards",
+        "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
+      }
+    ],
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
   },
   {
     "id": "knee-ap",
@@ -85,7 +121,25 @@
       "เห็น joint space และ condyles ชัดเจน",
       "ไม่หมุน มี soft tissue รอบเข่าครบ"
     ],
-    "pro_tips": "คลำ joint line ก่อนจัด CR และอย่าบิดขาขณะผู้ป่วยเจ็บ"
+    "pro_tips": "คลำ joint line ก่อนจัด CR และอย่าบิดขาขณะผู้ป่วยเจ็บ",
+    "clinical_references": [
+      {
+        "id": "course-pack",
+        "title": "Course pack: Positioning and Basic Radiographic Anatomy (PDFs supplied by user)",
+        "detail": "Position Abdomen.pdf; Pelvis.pdf; การจัดท่า upper limb.pdf; รังสีกายวิภาค Lower limb.pdf; Spine.pdf; กายวิภาคและจัดท่ากะโหลก_merged.pdf"
+      },
+      {
+        "id": "ncbi-statpearls",
+        "title": "NCBI Bookshelf: X-ray Radiographic Patient Positioning",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK565865/"
+      },
+      {
+        "id": "acr-standards",
+        "title": "American College of Radiology: Practice Parameters and Technical Standards",
+        "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
+      }
+    ],
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
   },
   {
     "id": "c-spine-lateral",
@@ -114,7 +168,25 @@
       "เห็น C1 ถึง C7/T1 junction",
       "เห็น alignment และ prevertebral soft tissue"
     ],
-    "pro_tips": "ห้ามให้ผู้ป่วยขยับคอหากสงสัย trauma และทำตาม trauma protocol"
+    "pro_tips": "ห้ามให้ผู้ป่วยขยับคอหากสงสัย trauma และทำตาม trauma protocol",
+    "clinical_references": [
+      {
+        "id": "course-pack",
+        "title": "Course pack: Positioning and Basic Radiographic Anatomy (PDFs supplied by user)",
+        "detail": "Position Abdomen.pdf; Pelvis.pdf; การจัดท่า upper limb.pdf; รังสีกายวิภาค Lower limb.pdf; Spine.pdf; กายวิภาคและจัดท่ากะโหลก_merged.pdf"
+      },
+      {
+        "id": "ncbi-statpearls",
+        "title": "NCBI Bookshelf: X-ray Radiographic Patient Positioning",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK565865/"
+      },
+      {
+        "id": "acr-standards",
+        "title": "American College of Radiology: Practice Parameters and Technical Standards",
+        "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
+      }
+    ],
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
   },
   {
     "id": "hand-pa",
@@ -143,6 +215,24 @@
       "เห็นมือครบตั้งแต่ปลายนิ้วถึง distal radius/ulna",
       "joint spaces ไม่ซ้อนและไม่มีการหมุน"
     ],
-    "pro_tips": "ให้ผู้ป่วยคลายมือ ไม่เกร็งนิ้ว และตรวจ marker ก่อน exposure"
+    "pro_tips": "ให้ผู้ป่วยคลายมือ ไม่เกร็งนิ้ว และตรวจ marker ก่อน exposure",
+    "clinical_references": [
+      {
+        "id": "course-pack",
+        "title": "Course pack: Positioning and Basic Radiographic Anatomy (PDFs supplied by user)",
+        "detail": "Position Abdomen.pdf; Pelvis.pdf; การจัดท่า upper limb.pdf; รังสีกายวิภาค Lower limb.pdf; Spine.pdf; กายวิภาคและจัดท่ากะโหลก_merged.pdf"
+      },
+      {
+        "id": "ncbi-statpearls",
+        "title": "NCBI Bookshelf: X-ray Radiographic Patient Positioning",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK565865/"
+      },
+      {
+        "id": "acr-standards",
+        "title": "American College of Radiology: Practice Parameters and Technical Standards",
+        "url": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Practice-Parameters-and-Technical-Standards"
+      }
+    ],
+    "clinical_note": "ค่าทางเทคนิคเป็นช่วงอ้างอิงสำหรับผู้ใหญ่ ต้องตรวจสอบกับ local protocol, เครื่อง, detector และผู้รับผิดชอบก่อนใช้งานจริง"
   }
 ]
