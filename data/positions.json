@@ -3,7 +3,7 @@
     "id": "ankle-ap-mortise",
     "category": "Lower Extremity",
     "name_en": "Ankle AP Mortise (15–20° Medial Oblique)",
-    "name_th": "ข้อเท้า ท่า AP Mortise",
+    "name_th": "ข้อเท้า ท่า AP Mortise (บิดเข้า 15-20°)",
     "aliases": [
       "Ankle Mortise",
       "Mortise view",
@@ -63,7 +63,7 @@
     "id": "chest-pa",
     "category": "Chest/Abdomen",
     "name_en": "Chest PA Erect",
-    "name_th": "ทรวงอก ท่า PA ยืน",
+    "name_th": "ทรวงอก ท่า PA Upright",
     "aliases": [
       "CXR",
       "Chest PA",
@@ -123,7 +123,7 @@
     "id": "knee-ap",
     "category": "Lower Extremity",
     "name_en": "Knee AP",
-    "name_th": "เข่า ท่า AP",
+    "name_th": "ข้อเข่า ท่า AP",
     "aliases": [
       "Knee AP",
       "เข่า"
@@ -181,7 +181,7 @@
     "id": "c-spine-lateral",
     "category": "Spine",
     "name_en": "C-Spine Lateral",
-    "name_th": "กระดูกคอ ท่า Lateral",
+    "name_th": "กระดูกสันหลังส่วนคอ C-spine",
     "aliases": [
       "Cervical spine lateral",
       "คอด้านข้าง"
@@ -189,7 +189,7 @@
     "clinical_indication": "ประเมิน alignment, vertebral bodies และ prevertebral soft tissue",
     "patient_position": "ยืนหรือนอนตะแคง ศีรษะตรง ไหล่กดต่ำ และยื่นคางเล็กน้อย",
     "model_url": "assets/models/head-neck.glb",
-    "image_url": "assets/images/positioning/c-spine-lateral.jpg",
+    "image_url": "assets/images/positioning/c-spine-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
       "sid": "180 cm (72 inches)",
@@ -297,7 +297,7 @@
     "id": "abdomen-supine",
     "category": "Chest/Abdomen",
     "name_en": "Abdomen AP Supine",
-    "name_th": "ช่องท้อง ท่า AP นอนหงาย",
+    "name_th": "ช่องท้อง ท่า AP Supine นอนหงาย",
     "aliases": [
       "KUB supine",
       "Abdomen AP"
@@ -320,7 +320,7 @@
     "pro_tips": "ให้ผู้ป่วยหายใจออกและกลั้นหายใจก่อน exposure",
     "source": "Position Abdomen.pdf",
     "model_url": "assets/models/spine-trunk.glb",
-    "image_url": null,
+    "image_url": "assets/images/positioning/abdomen-supine.jpg",
     "camera_orbit": "0deg 75deg 0.85m",
     "camera_target": "auto auto auto",
     "hotspots": [
@@ -336,7 +336,7 @@
     "id": "abdomen-upright",
     "category": "Chest/Abdomen",
     "name_en": "Abdomen AP Upright",
-    "name_th": "ช่องท้อง ท่า AP ยืน",
+    "name_th": "ช่องท้อง ท่า AP Upright ยืน",
     "aliases": [
       "KUB upright",
       "free air"
@@ -359,7 +359,7 @@
     "pro_tips": "ถ้ายืนไม่ได้ อาจจัดท่านั่งแทนตาม protocol หน่วยงาน",
     "source": "Position Abdomen.pdf",
     "model_url": "assets/models/spine-trunk.glb",
-    "image_url": null,
+    "image_url": "assets/images/positioning/abdomen-upright.jpg",
     "camera_orbit": "0deg 75deg 0.85m",
     "camera_target": "auto auto auto",
     "hotspots": [
@@ -438,7 +438,7 @@
     "pro_tips": "ไม่ใช้ท่านี้ในผู้ป่วยที่สงสัย hip fracture จนกว่าจะได้รับคำสั่งที่เหมาะสม",
     "source": "Pelvis.pdf",
     "model_url": "assets/models/hip-pelvis.glb",
-    "image_url": null,
+    "image_url": "assets/images/positioning/pelvis-frogleg.jpg",
     "camera_orbit": "0deg 70deg 0.7m",
     "camera_target": "auto auto auto",
     "hotspots": [
