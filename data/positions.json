@@ -1,4 +1,148 @@
 [
-{"id":"ankle-ap-mortise","category":"Lower Extremity","name_en":"Ankle AP Mortise (15–20° Medial Oblique)","name_th":"ข้อเท้า ท่า AP Mortise","aliases":["Ankle Mortise","Mortise view","ข้อเท้าหมุนใน"],"clinical_indication":"ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space","patient_position":"นอนหงาย ขาเหยียดตรง dorsiflexion เล็กน้อย และหมุนขา/เท้าเข้าใน 15–20°","model_url":"assets/models/ankle_mortise.glb","parameters":{"sid":"100 cm (40 inches)","ir_size":"24×30 cm","tube_angle":"0° perpendicular","central_ray":"กึ่งกลางระหว่าง medial และ lateral malleoli","grid":"Non-grid หรือ grid ตามความหนา","kvp_range":"55–65 kVp","mas_range":"2.5–5 mAs"},"image_criteria":["Mortise joint space เปิดชัดเจน","ไม่เห็นการทับซ้อนของ distal fibula และ talus","รวม distal tibia/fibula และ talus ครบ"],"pro_tips":"หมุนตั้งแต่สะโพก/ขาทั้งท่อน ไม่ใช่หมุนเฉพาะข้อเท้า"},
-{"id":"chest-pa","category":"Chest/Abdomen","name_en":"Chest PA Erect","name_th":"ทรวงอก ท่า PA ยืน","aliases":["CXR","Chest PA","ปอด"],"clinical_indication":"ประเมินปอด หัวใจ และ mediastinum","patient_position":"ยืนหันหน้าเข้าหา detector วางไหล่ชิดและหมุนไหล่ไปข้างหน้า สูดหายใจเข้าเต็มที่","image_url":"assets/images/chest-pa-positioning.jpg","image_credit":"ภาพ: AndyThesis / Wikimedia Commons · CC0 1.0","parameters":{"sid":"180 cm (72 inches)","ir_size":"35×43 cm","tube_angle":"0° perpendicular","central_ray":"ระดับ T7","grid":"Grid","kvp_range":"110–125 kVp","mas_range":"1–4 mAs"},"image_criteria":["เห็นปอดทั้งสองข้างและ costophrenic angles","หัวใจไม่ขยายจากการถ่าย AP","scapulae อยู่นอก lung fields"],"pro_tips":"ย้ำให้ผู้ป่วยสูดลมหายใจเข้าเต็มที่และกลั้นหายใจ"}
+  {
+    "id": "ankle-ap-mortise",
+    "category": "Lower Extremity",
+    "name_en": "Ankle AP Mortise (15–20° Medial Oblique)",
+    "name_th": "ข้อเท้า ท่า AP Mortise",
+    "aliases": [
+      "Ankle Mortise",
+      "Mortise view",
+      "ข้อเท้าหมุนใน"
+    ],
+    "clinical_indication": "ประเมินกระดูกหักบริเวณ malleoli และ mortise joint space",
+    "patient_position": "นอนหงาย ขาเหยียดตรง dorsiflexion เล็กน้อย และหมุนขา/เท้าเข้าใน 15–20°",
+    "model_url": "assets/models/ankle_mortise.glb",
+    "parameters": {
+      "sid": "100 cm (40 inches)",
+      "ir_size": "24×30 cm",
+      "tube_angle": "0° perpendicular",
+      "central_ray": "กึ่งกลางระหว่าง medial และ lateral malleoli",
+      "grid": "Non-grid หรือ grid ตามความหนา",
+      "kvp_range": "55–65 kVp",
+      "mas_range": "2.5–5 mAs"
+    },
+    "image_criteria": [
+      "Mortise joint space เปิดชัดเจน",
+      "ไม่เห็นการทับซ้อนของ distal fibula และ talus",
+      "รวม distal tibia/fibula และ talus ครบ"
+    ],
+    "pro_tips": "หมุนตั้งแต่สะโพก/ขาทั้งท่อน ไม่ใช่หมุนเฉพาะข้อเท้า"
+  },
+  {
+    "id": "chest-pa",
+    "category": "Chest/Abdomen",
+    "name_en": "Chest PA Erect",
+    "name_th": "ทรวงอก ท่า PA ยืน",
+    "aliases": [
+      "CXR",
+      "Chest PA",
+      "ปอด"
+    ],
+    "clinical_indication": "ประเมินปอด หัวใจ และ mediastinum",
+    "patient_position": "ยืนหันหน้าเข้าหา detector วางไหล่ชิดและหมุนไหล่ไปข้างหน้า สูดหายใจเข้าเต็มที่",
+    "image_url": "assets/images/chest-pa-positioning.jpg",
+    "image_credit": "ภาพ: AndyThesis / Wikimedia Commons · CC0 1.0",
+    "parameters": {
+      "sid": "180 cm (72 inches)",
+      "ir_size": "35×43 cm",
+      "tube_angle": "0° perpendicular",
+      "central_ray": "ระดับ T7",
+      "grid": "Grid",
+      "kvp_range": "110–125 kVp",
+      "mas_range": "1–4 mAs"
+    },
+    "image_criteria": [
+      "เห็นปอดทั้งสองข้างและ costophrenic angles",
+      "หัวใจไม่ขยายจากการถ่าย AP",
+      "scapulae อยู่นอก lung fields"
+    ],
+    "pro_tips": "ย้ำให้ผู้ป่วยสูดลมหายใจเข้าเต็มที่และกลั้นหายใจ"
+  },
+  {
+    "id": "knee-ap",
+    "category": "Lower Extremity",
+    "name_en": "Knee AP",
+    "name_th": "เข่า ท่า AP",
+    "aliases": [
+      "Knee AP",
+      "เข่า"
+    ],
+    "clinical_indication": "ประเมิน knee joint, distal femur และ proximal tibia",
+    "patient_position": "นอนหงาย เหยียดขา จัด patella ให้หันตรงขึ้นและจัดแนวขนานกับ detector",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Normal_knee_X-ray.jpg",
+    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "parameters": {
+      "sid": "100 cm (40 inches)",
+      "ir_size": "18x24 cm",
+      "tube_angle": "0–5° cephalad ตาม habitus",
+      "central_ray": "กึ่งกลาง knee joint",
+      "grid": "ตามความหนา",
+      "kvp_range": "60–70 kVp",
+      "mas_range": "2–5 mAs"
+    },
+    "image_criteria": [
+      "เห็น joint space และ condyles ชัดเจน",
+      "ไม่หมุน มี soft tissue รอบเข่าครบ"
+    ],
+    "pro_tips": "คลำ joint line ก่อนจัด CR และอย่าบิดขาขณะผู้ป่วยเจ็บ"
+  },
+  {
+    "id": "c-spine-lateral",
+    "category": "Spine",
+    "name_en": "C-Spine Lateral",
+    "name_th": "กระดูกคอ ท่า Lateral",
+    "aliases": [
+      "Cervical spine lateral",
+      "คอด้านข้าง"
+    ],
+    "clinical_indication": "ประเมิน alignment, vertebral bodies และ prevertebral soft tissue",
+    "patient_position": "ยืนหรือนอนตะแคง ศีรษะตรง ไหล่กดต่ำ และยื่นคางเล็กน้อย",
+    "model_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/CesiumMan/glTF-Binary/CesiumMan.glb",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/C-Spine_Lateral_view.jpg",
+    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "parameters": {
+      "sid": "180 cm (72 inches)",
+      "ir_size": "24x30 cm",
+      "tube_angle": "0° perpendicular",
+      "central_ray": "ระดับ C4 (thyroid cartilage)",
+      "grid": "Grid",
+      "kvp_range": "70–80 kVp",
+      "mas_range": "5–10 mAs"
+    },
+    "image_criteria": [
+      "เห็น C1 ถึง C7/T1 junction",
+      "เห็น alignment และ prevertebral soft tissue"
+    ],
+    "pro_tips": "ห้ามให้ผู้ป่วยขยับคอหากสงสัย trauma และทำตาม trauma protocol"
+  },
+  {
+    "id": "hand-pa",
+    "category": "Upper Extremity",
+    "name_en": "Hand PA",
+    "name_th": "มือ ท่า PA",
+    "aliases": [
+      "Hand PA",
+      "มือ"
+    ],
+    "clinical_indication": "ประเมิน phalanges, metacarpals และ joint spaces",
+    "patient_position": "วางมือคว่ำบน detector กางนิ้วเล็กน้อยและจัดนิ้วให้ขนานกับ detector",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Human_hand_plain_X-ray.jpg",
+    "image_credit": "Wikimedia Commons · ตรวจสอบ license ของไฟล์ก่อนเผยแพร่",
+    "parameters": {
+      "sid": "100 cm (40 inches)",
+      "ir_size": "18x24 cm",
+      "tube_angle": "0° perpendicular",
+      "central_ray": "กึ่งกลาง third MCP joint",
+      "grid": "Non-grid",
+      "kvp_range": "50–60 kVp",
+      "mas_range": "1–3 mAs"
+    },
+    "image_criteria": [
+      "เห็นมือครบตั้งแต่ปลายนิ้วถึง distal radius/ulna",
+      "joint spaces ไม่ซ้อนและไม่มีการหมุน"
+    ],
+    "pro_tips": "ให้ผู้ป่วยคลายมือ ไม่เกร็งนิ้ว และตรวจ marker ก่อน exposure"
+  }
 ]
