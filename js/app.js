@@ -1,4 +1,6 @@
 let items = [], active = 'All';
+let isAdmin = localStorage.getItem('radpose_is_admin') === 'true';
+
 const $ = id => document.getElementById(id);
 const categories = ['All', 'Upper Extremity', 'Lower Extremity', 'Spine', 'Chest/Abdomen', 'Skull/Facial'];
 
@@ -81,8 +83,8 @@ function setView(mode) {
 
   $('imageTab').classList.toggle('active', mode === 'image');
   $('modelTab').classList.toggle('active', mode === 'model');
-  $('imageTab').textContent = hasImage ? '▧ ภาพการจัดท่า' : '▧ ภาพการจัดท่า (ไม่มีรูป)';
-  $('modelTab').textContent = hasModel ? '◇ โมเดล 3D' : '◇ โมเดล 3D · รอไฟล์';
+  $('imageTab').textContent = hasImage ? '▧ ภาพการจัดท่า' : '▧ ภาพการจัดท่า (รออัปโหลด)';
+  $('modelTab').textContent = hasModel ? '◇ โมเดล 3D' : '◇ โมเดล 3D (ไม่มี)';
 
   if (mode === 'image') {
     viewer.classList.add('hidden');
@@ -96,7 +98,7 @@ function setView(mode) {
       image.classList.add('hidden');
       empty.classList.remove('hidden');
       empty.querySelector('strong').textContent = 'ยังไม่มีภาพประกอบสำหรับท่านี้';
-      empty.querySelector('span').textContent = 'สามารถดูรายละเอียดพารามิเตอร์และการจัดท่าด้านล่าง';
+      empty.querySelector('span').textContent = isAdmin ? 'กดปุ่ม "✏️ แก้ไขท่านี้" ด้านบนเพื่ออัปโหลดภาพ' : 'สามารถดูพารามิเตอร์และจุดสำคัญด้านล่าง';
       $('modelBadge').textContent = 'INFO ONLY';
     }
   } else if (mode === 'model') {
@@ -105,15 +107,15 @@ function setView(mode) {
     if (hasModel) {
       empty.classList.add('hidden');
       viewer.classList.remove('hidden');
-      if (viewer.src !== currentItem.model_url) {
-        viewer.src = currentItem.model_url;
+      if (viewer.getAttribute('src') !== currentItem.model_url) {
+        viewer.setAttribute('src', currentItem.model_url);
       }
       $('modelBadge').textContent = '3D READY';
     } else {
       viewer.classList.add('hidden');
       empty.classList.remove('hidden');
-      empty.querySelector('strong').textContent = 'ยังไม่มีโมเดล 3D เฉพาะท่านี้';
-      empty.querySelector('span').textContent = 'กำลังเพิ่มโมเดลกระดูกและข้อต่อในระบบ';
+      empty.querySelector('strong').textContent = 'ยังไม่มีโมเดล 3D สำหรับท่านี้';
+      empty.querySelector('span').textContent = 'กำลังพัฒนาและจัดเตรียมโมเดล 3D เพิ่มเติม';
       $('modelBadge').textContent = 'MODEL PENDING';
     }
   }
@@ -131,6 +133,12 @@ function open(x) {
   viewer.removeAttribute('src');
   image.removeAttribute('src');
   image.classList.remove('image-failed');
+
+  if (isAdmin) {
+    $('editCurrentPositionBtn').classList.remove('hidden');
+  } else {
+    $('editCurrentPositionBtn').classList.add('hidden');
+  }
 
   const p = x.parameters || {};
   $('crBarText').textContent = p.central_ray || 'ดูรายละเอียดด้านล่าง';
@@ -228,19 +236,155 @@ $('imageTab').onclick = () => setView('image');
 $('modelTab').onclick = () => setView('model');
 $('searchInput').oninput = filter;
 
+/* Admin functionality */
+function toggleAdminMode() {
+  if (!isAdmin) {
+    const pwd = prompt('กรุณาใส่รหัสผ่านแอดมิน: (ค่าเริ่มต้นคือ rad123)');
+    if (pwd === 'rad123' || pwd === 'admin') {
+      isAdmin = true;
+      localStorage.setItem('radpose_is_admin', 'true');
+      alert('เข้าสู่โหมดแอดมินเรียบร้อย! คุณสามารถคลิกท่าแล้วกด "✏️ แก้ไขท่านี้" เพื่ออัปโหลดรูปภาพหรือแก้ไขค่าได้');
+      $('adminBtn').textContent = '✅ แอดมิน (ON)';
+      if (currentItem) $('editCurrentPositionBtn').classList.remove('hidden');
+    } else if (pwd !== null) {
+      alert('รหัสผ่านไม่ถูกต้อง');
+    }
+  } else {
+    if (confirm('ต้องการออกจากโหมดแอดมินหรือไม่?')) {
+      isAdmin = false;
+      localStorage.setItem('radpose_is_admin', 'false');
+      $('adminBtn').textContent = '⚙️ แอดมิน';
+      $('editCurrentPositionBtn').classList.add('hidden');
+    }
+  }
+}
+
+$('adminBtn').onclick = toggleAdminMode;
+if (isAdmin) $('adminBtn').textContent = '✅ แอดมิน (ON)';
+
+function openAdminEdit(item) {
+  if (!item) return;
+  $('editId').value = item.id;
+  $('editNameEn').value = item.name_en || '';
+  $('editNameTh').value = item.name_th || '';
+  $('editIndication').value = item.clinical_indication || '';
+  $('editPatientPosition').value = item.patient_position || '';
+
+  const p = item.parameters || {};
+  $('editSid').value = p.sid || '';
+  $('editIrSize').value = p.ir_size || '';
+  $('editTubeAngle').value = p.tube_angle || '';
+  $('editGrid').value = p.grid || '';
+  $('editKvp').value = p.kvp_range || '';
+  $('editMas').value = p.mas_range || '';
+  $('editCr').value = p.central_ray || '';
+
+  $('editImageUrl').value = item.image_url || '';
+  $('editModelUrl').value = item.model_url || '';
+  $('editImageFile').value = '';
+
+  $('adminModal').classList.remove('hidden');
+}
+
+function closeAdminModal() {
+  $('adminModal').classList.add('hidden');
+}
+
+$('editCurrentPositionBtn').onclick = () => {
+  openAdminEdit(currentItem);
+};
+
+$('closeAdminBtn').onclick = closeAdminModal;
+$('adminModal').onclick = e => {
+  if (e.target.id === 'adminModal') closeAdminModal();
+};
+
+// Handle Image File upload (Convert to Base64 data URL)
+$('editImageFile').onchange = e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = evt => {
+    $('editImageUrl').value = evt.target.result;
+  };
+  reader.readAsDataURL(file);
+};
+
+// Save edits
+$('adminForm').onsubmit = e => {
+  e.preventDefault();
+  const id = $('editId').value;
+  const item = items.find(x => x.id === id);
+  if (!item) return;
+
+  item.name_en = $('editNameEn').value;
+  item.name_th = $('editNameTh').value;
+  item.clinical_indication = $('editIndication').value;
+  item.patient_position = $('editPatientPosition').value;
+
+  item.parameters = item.parameters || {};
+  item.parameters.sid = $('editSid').value;
+  item.parameters.ir_size = $('editIrSize').value;
+  item.parameters.tube_angle = $('editTubeAngle').value;
+  item.parameters.grid = $('editGrid').value;
+  item.parameters.kvp_range = $('editKvp').value;
+  item.parameters.mas_range = $('editMas').value;
+  item.parameters.central_ray = $('editCr').value;
+
+  item.image_url = $('editImageUrl').value || null;
+  item.model_url = $('editModelUrl').value || null;
+
+  // Save to LocalStorage so edits persist immediately in browser
+  localStorage.setItem('radpose_custom_positions', JSON.stringify(items));
+
+  closeAdminModal();
+  filter();
+  if (currentItem && currentItem.id === id) {
+    open(item);
+  }
+  alert('บันทึกข้อมูลเรียบร้อยแล้ว!');
+};
+
+// Export JSON
+$('exportDataBtn').onclick = () => {
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(items, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", "positions.json");
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+};
+
 document.addEventListener('keydown', e => {
-  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+  if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
     e.preventDefault();
     $('searchInput').focus();
   }
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') {
+    closeModal();
+    closeAdminModal();
+  }
 });
 
 async function init() {
   try {
     const res = await fetch('data/positions.json');
     if (!res.ok) throw new Error('Cannot load positions.json');
-    items = await res.json();
+    const defaultItems = await res.json();
+    
+    // Check if user has saved custom data in localStorage
+    const saved = localStorage.getItem('radpose_custom_positions');
+    if (saved) {
+      try {
+        items = JSON.parse(saved);
+      } catch (err) {
+        items = defaultItems;
+      }
+    } else {
+      items = defaultItems;
+    }
+
     renderNav();
     filter();
   } catch (e) {
@@ -250,7 +394,7 @@ async function init() {
 }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js?build=15').catch(console.warn);
+  navigator.serviceWorker.register('./service-worker.js?build=16').catch(console.warn);
 }
 
 init();

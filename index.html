@@ -23,6 +23,7 @@
         </div>
         <div class="top-actions">
           <span class="live-dot">● OFFLINE READY</span>
+          <button id="adminBtn" class="icon-btn" title="โหมดแก้ไข / แอดมิน" aria-label="แอดมิน">⚙️ แอดมิน</button>
           <button id="themeBtn" class="icon-btn" title="สลับธีม" aria-label="สลับธีม">☼</button>
         </div>
       </div>
@@ -58,6 +59,7 @@
     </footer>
   </main>
 
+  <!-- Detail Modal -->
   <div id="detailModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
       <button id="closeModalBtn" class="close" aria-label="ปิด">×</button>
@@ -66,7 +68,10 @@
           <div id="modalCategory" class="eyebrow"></div>
           <h2 id="modalTitle"></h2>
         </div>
-        <span id="modelBadge" class="model-badge"></span>
+        <div class="modal-head-actions">
+          <button id="editCurrentPositionBtn" class="edit-btn hidden" title="แก้ไขท่านี้">✏️ แก้ไขท่านี้</button>
+          <span id="modelBadge" class="model-badge"></span>
+        </div>
       </div>
       <div class="view-tabs">
         <button id="imageTab" class="view-tab active">▧ ภาพการจัดท่า</button>
@@ -81,7 +86,7 @@
         <div id="viewerEmpty" class="viewer-empty hidden">
           <div>◌</div>
           <strong>ยังไม่มีภาพหรือโมเดล</strong>
-          <span>เพิ่มไฟล์เฉพาะท่านี้ใน assets แล้วจึงเปิดดูได้</span>
+          <span>เพิ่มไฟล์เฉพาะท่านี้ในโหมดแอดมิน</span>
         </div>
       </div>
       <div id="crBar" class="cr-bar">
@@ -89,6 +94,99 @@
       </div>
       <div id="sourceCredit" class="source-credit hidden"></div>
       <div id="details" class="details"></div>
+    </div>
+  </div>
+
+  <!-- Admin Edit Modal -->
+  <div id="adminModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+    <div class="modal-card admin-card">
+      <button id="closeAdminBtn" class="close" aria-label="ปิด">×</button>
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">ADMIN PANEL</div>
+          <h2 id="adminModalTitle">⚙️ แก้ไขข้อมูลและอัปโหลดภาพ</h2>
+        </div>
+      </div>
+      <form id="adminForm" class="admin-form">
+        <div class="form-group">
+          <label>ท่าตรวจ (ID)</label>
+          <input type="text" id="editId" readonly class="input-readonly">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>ชื่อภาษาอังกฤษ</label>
+            <input type="text" id="editNameEn" required>
+          </div>
+          <div class="form-group">
+            <label>ชื่อภาษาไทย</label>
+            <input type="text" id="editNameTh" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>ข้อบ่งชี้ทางคลินิก (Indication)</label>
+          <input type="text" id="editIndication">
+        </div>
+        <div class="form-group">
+          <label>การจัดท่าผู้ป่วย (Patient Position)</label>
+          <textarea id="editPatientPosition" rows="2"></textarea>
+        </div>
+
+        <div class="form-section-title">พารามิเตอร์เทคนิค (Exposure Parameters)</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>SID</label>
+            <input type="text" id="editSid" placeholder="เช่น 100 cm (40 inches)">
+          </div>
+          <div class="form-group">
+            <label>IR Size</label>
+            <input type="text" id="editIrSize" placeholder="เช่น 24x30 cm">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tube Angle</label>
+            <input type="text" id="editTubeAngle" placeholder="เช่น 0° perpendicular">
+          </div>
+          <div class="form-group">
+            <label>Grid</label>
+            <input type="text" id="editGrid" placeholder="Grid / Non-grid">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>kVp Range</label>
+            <input type="text" id="editKvp" placeholder="เช่น 60–70 kVp">
+          </div>
+          <div class="form-group">
+            <label>mAs Range</label>
+            <input type="text" id="editMas" placeholder="เช่น 2–5 mAs">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Central Ray (CR)</label>
+          <input type="text" id="editCr" placeholder="จุดเล็ง CR สำคัญ">
+        </div>
+
+        <div class="form-section-title">อัปโหลดภาพจัดท่า (2D Image Guide)</div>
+        <div class="form-group">
+          <label>เลือกไฟล์รูปภาพจากเครื่อง (PNG / JPG / WEBP)</label>
+          <input type="file" id="editImageFile" accept="image/*">
+          <small class="form-hint">เลือกรูปแล้วระบบจะเก็บไว้ในบราวเซอร์ทันที หรือใส่ URL ด้านล่าง</small>
+        </div>
+        <div class="form-group">
+          <label>หรือใส่ Image URL</label>
+          <input type="text" id="editImageUrl" placeholder="assets/images/... หรือ https://...">
+        </div>
+        <div class="form-group">
+          <label>โมเดล 3D URL (.glb)</label>
+          <input type="text" id="editModelUrl" placeholder="assets/models/... หรือ https://...">
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="exportDataBtn" class="btn-secondary">📥 ดาวน์โหลด JSON ทั้งหมด</button>
+          <button type="submit" class="btn-primary">💾 บันทึกการเปลี่ยนแปลง</button>
+        </div>
+      </form>
     </div>
   </div>
 

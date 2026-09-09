@@ -110,7 +110,7 @@
     ],
     "clinical_indication": "ประเมิน knee joint, distal femur และ proximal tibia",
     "patient_position": "นอนหงาย เหยียดขา จัด patella ให้หันตรงขึ้นและจัดแนวขนานกับ detector",
-    "model_url": "assets/models/articular_joints.glb",
+    "model_url": "assets/models/human_skeleton.glb",
     "image_url": "assets/images/positioning/knee-ap.jpg",
     "image_credit": "Source: เอกสารสรุปก่อนฝึกงาน",
     "parameters": {
